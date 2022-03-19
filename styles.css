@@ -1,0 +1,264 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --dark-primary: #0F0F0F;
+  --dark-secondary: #1A1A1A;
+  --text-primary: #f2f2f2;
+  --text-secondary: #c5c5c5;
+  --nav-border: #292929;
+
+  --nav-height: 7rem;
+
+  --transition: .4s all;
+
+  --section-container-max-width: 80vw;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--dark-primary);
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  font-family: 'Source sans pro', sans-serif;
+}
+
+.section-container {
+  max-width: var(--section-container-max-width);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
+  padding: 3rem 0;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--dark-primary);
+  border-bottom: 1px solid var(--nav-border);
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 1.5rem 2rem;
+}
+
+nav ul li a{
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+nav ul li a:hover {
+  color: var(--text-primary);
+}
+
+section + section{
+  padding-top: var(--nav-height);
+}
+
+#logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 2rem;
+  color: var(--text-primary);
+}
+
+span.tag {
+  color: #00B0FF;
+  font-weight: bold;
+}
+
+#logo span.tag:nth-of-type(2n) {
+  padding-left: 1rem;
+}
+
+#name {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#welcome-section {
+  height: 100vh;
+  padding-top: var(--nav-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section .section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+#welcome-section .section-container .left{
+  width: 50%;
+}
+
+#welcome-section .section-container .right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#welcome-section .section-container .right img{
+  width: 80%;
+}
+
+#welcome-section .subtext {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--text-secondary);
+}
+
+#welcome-section p {
+  width: 100%;
+  line-height: 2.5rem;
+}
+
+#welcome-section a {
+  text-decoration: underline;
+}
+
+#projects {
+  background: var(--dark-secondary);
+  padding-bottom: 4rem;
+}
+
+.projects-container {
+  margin: 3rem 0;
+}
+
+.project-tile {
+  background: var(--dark-primary);
+  border-radius: .25rem;
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
+}
+
+.project-tile .project-data {
+  padding: 2rem;
+  width: 100%;
+}
+
+.project-tile .project-data .project-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.project-tile .project-image {
+  width: 75rem;
+}
+
+.project-image img {
+  width: 100%;
+  filter:grayscale(1);
+}
+
+.project-description,
+.project-techs,
+.project-image {
+  margin-bottom: 1rem;
+}
+
+.project-link, 
+.footer-link{
+  text-decoration: underline;
+}
+
+#contact {
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+#contact h2 {
+  padding-bottom: 0;
+}
+
+#contact .links-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+#contact a {
+  color: var(--text-secondary);
+  font-size: 2.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+#contact a:hover {
+  color: var(--text-primary);
+  transform:translateY(-1rem);
+}
+
+#contact .links-container a img {
+  width: 5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
