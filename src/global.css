@@ -1,0 +1,89 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --dark-primary: #0F0F0F;
+  --dark-secondary: #1A1A1A;
+  --text-primary: #f2f2f2;
+  --text-secondary: #c5c5c5;
+  --nav-border: #292929;
+
+  --nav-height: 7rem;
+
+  --transition: .4s all;
+
+  --section-container-max-width: 80vw;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--dark-primary);
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  font-family: 'Source sans pro', sans-serif;
+}
+
+.section-container {
+  max-width: var(--section-container-max-width);
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
+  padding: 3rem 0;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
