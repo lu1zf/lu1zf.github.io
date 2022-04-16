@@ -5,13 +5,13 @@ const Navbar = () => {
     <nav id="navbar">
       <div id="logo">
         <a href="#">
-          <span class="tag">
+          <span className="tag">
             &lt;
           </span>
           <div id="name">
             Luiz Silva
           </div>
-          <span class="tag">
+          <span className="tag">
             / &gt;
           </span>
         </a>
