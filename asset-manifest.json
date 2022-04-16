@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.11ea3735.css",
+    "main.js": "/static/js/main.5e9e1c4d.js",
+    "static/media/tubetools.png": "/static/media/tubetools.bb3ec06df4671eccf8ee.png",
+    "static/media/mutuo_associados.png": "/static/media/mutuo_associados.a1a3fcf24943f03999f2.png",
+    "static/media/currency-convert.png": "/static/media/currency-convert.b401a458ae176364d05b.png",
+    "static/media/proffy.png": "/static/media/proffy.eac08fac2b04170468cc.png",
+    "static/media/gitfinder.png": "/static/media/gitfinder.c96d7fd9de6cb134471b.png",
+    "static/media/pipehuby.png": "/static/media/pipehuby.d8d342dfaa0184eeb69c.png",
+    "static/media/developer.svg": "/static/media/developer.8d2f64aa6e8c4f9f5987b86529b21dba.svg",
+    "static/media/github.svg": "/static/media/github.f694b8e45505c5013b1340f12f1e9cde.svg",
+    "static/media/telegram.svg": "/static/media/telegram.bdb990c4f871d0976a225ecfd5f9dec4.svg",
+    "index.html": "/index.html",
+    "static/media/linkedin.svg": "/static/media/linkedin.65b90518926cd16c326193e9d027d71a.svg",
+    "main.11ea3735.css.map": "/static/css/main.11ea3735.css.map",
+    "main.5e9e1c4d.js.map": "/static/js/main.5e9e1c4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11ea3735.css",
+    "static/js/main.5e9e1c4d.js"
+  ]
+}
