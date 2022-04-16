@@ -44,6 +44,10 @@ body {
   margin: 0 auto;
 }
 
+section+section {
+  padding-top: var(--nav-height);
+}
+
 h1 {
   font-size: 6rem;
 }
