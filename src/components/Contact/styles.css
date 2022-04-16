@@ -1,0 +1,33 @@
+#contact {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 4rem;
+}
+
+#contact h2 {
+  padding-bottom: 0;
+}
+
+#contact .links-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+#contact a {
+  color: var(--text-secondary);
+  font-size: 2.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+#contact a:hover {
+  color: var(--text-primary);
+  transform: translateY(-1rem);
+}
+
+#contact .links-container a img {
+  width: 5rem;
+}
