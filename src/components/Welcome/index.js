@@ -7,7 +7,7 @@ const Welcome = () => {
       <div className="section-container">
         <div className="left">
           <h1>Olá, sou Luiz Silva</h1>
-          <div className="subtext">Desenvolvedor web autodidata</div>
+          <div className="subtext">Desenvolvedor Fullstack</div>
           <p>
             Potiguar, trabalho como desenvolvedor desde 2020. Atualmente
             atuo como dev fullstack na <a href="http://negocioonlinedozero.com" target="_blank">NODZ</a>.
