@@ -50,15 +50,49 @@ span.tag {
   font-size: 2rem;
 }
 
+#hamburguer-menu {
+  display: none;
+}
+
 @media (max-width: 37.5em) {
-  nav#navbar {
+  nav ul {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: -100vh;
+    transition: .2s all;
+    left: 0;
+    background: var(--dark-primary);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  nav ul li {
+    font-size: 2rem;
+  }
+
+  nav ul li a {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+  }
+
+  nav ul li a:hover {
+    border-bottom: 2px solid var(--text-secondary);
+  }
+
+  #hamburguer-menu {
+    display: unset;
+    position: relative;
+    padding-right: 2rem;
+    z-index: 3;
   }
 }
 
 @media (max-width: 28.75em) {
-  span.tag {
+  /* span.tag {
     display: none;
-  }
+  } */
 }
