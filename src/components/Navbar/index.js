@@ -1,6 +1,26 @@
 import './styles.css';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = (event) => {
+    setIsMenuOpen(!isMenuOpen);
+    toggleViewLinks();
+  };
+
+  const toggleViewLinks = () => {
+    const links = document.getElementById('links');
+
+    if (isMenuOpen) {
+      links.style.top = '-100vh';
+    } else {
+      links.style.top = '0';
+    }
+  }
+
   return (
     <nav id="navbar">
       <div id="logo">
@@ -16,11 +36,15 @@ const Navbar = () => {
           </span>
         </a>
       </div>
-      <ul>
-        <li><a href="#welcome-section">Sobre</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#contact">Contato</a></li>
+      <ul id="links">
+        <li><a href="#welcome-section" onClick={toggleMenu}>Sobre</a></li>
+        <li><a href="#projects" onClick={toggleMenu}>Projetos</a></li>
+        <li><a href="#contact" onClick={toggleMenu}>Contato</a></li>
       </ul>
+      <div id="hamburguer-menu" onClick={toggleMenu}>
+        {isMenuOpen && <CloseIcon sx={{ fontSize: 32 }} />}
+        {!isMenuOpen && <MenuIcon sx={{ fontSize: 32 }} />}
+      </div>
     </nav>
   );
 }
