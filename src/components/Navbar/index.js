@@ -2,10 +2,11 @@ import './styles.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
-import getUnicodeFlagIcon from 'country-flag-icons/unicode'
+import getUnicodeFlagIcon from 'country-flag-icons/unicode';
+import { Link } from "react-router-dom";
 
 
-const Navbar = ({ data }) => {
+const Navbar = ({ data, lang }) => {
   const { about, contact, projects } = data;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,6 +26,7 @@ const Navbar = ({ data }) => {
   }
 
   const US = getUnicodeFlagIcon('US');
+  const BR = getUnicodeFlagIcon('BR');
 
   return (
     <nav id="navbar">
@@ -45,7 +47,8 @@ const Navbar = ({ data }) => {
         <li><a href="#welcome-section" onClick={toggleMenu}>{about}</a></li>
         <li><a href="#projects" onClick={toggleMenu}>{projects}</a></li>
         <li><a href="#contact" onClick={toggleMenu}>{contact}</a></li>
-        <li><a href="#">English version {US}</a></li>
+        {(lang == 'pt-br') && <li><Link to="/en" onClick={toggleMenu}>English version {US}</Link></li>}
+        {(lang == 'en-us') && <li><Link to="/" onClick={toggleMenu}>Versão em português {BR}</Link></li>}
       </ul>
       <div id="hamburguer-menu" onClick={toggleMenu}>
         {isMenuOpen && <CloseIcon sx={{ fontSize: 32 }} />}
