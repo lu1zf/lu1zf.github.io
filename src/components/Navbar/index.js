@@ -31,7 +31,7 @@ const Navbar = ({ data, lang }) => {
   return (
     <nav id="navbar">
       <div id="logo">
-        <HashLink to={lang == 'pt-br' ? '#welcome-section' : '/en/#welcome-section'}>
+        <HashLink to={lang === 'pt-br' ? '#welcome-section' : '/en/#welcome-section'}>
           <span className="tag">
             &lt;
           </span>
