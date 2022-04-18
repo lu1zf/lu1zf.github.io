@@ -112,7 +112,7 @@ export const data = {
     welcome: {
       h1: "Hi, i'm Luiz Silva",
       subtext: 'Fullstack developer',
-      description: 'Brazilian, i work as a developer since 2020. Currently i work as a fullstack dev at',
+      description: 'Brazilian, working as a developer since 2020. Currently i work as a fullstack dev at',
     },
     projects: {
       h2: 'Projects',
