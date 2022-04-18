@@ -11,13 +11,13 @@ const Contact = ({ data }) => {
         <h2>{h2}</h2>
         <p>{description}</p>
         <div className="links-container">
-          <a id="profile-link" href="https://www.linkedin.com/in/lu1zf/" target="_blank" rel="noopener" >
+          <a id="profile-link" href="https://www.linkedin.com/in/lu1zf/" target="_blank" rel="noreferrer" >
             <img src={linkedinImg} alt="linkedin" />
           </a>
-          <a id="profile-link" href="https://www.github.com/lu1zf" target="_blank" rel="noopener">
+          <a id="profile-link" href="https://www.github.com/lu1zf" target="_blank" rel="noreferrer">
             <img src={githubImg} alt="github" />
           </a>
-          <a id="profile-link" href="https://t.me/lu1zs" target="_blank" rel="noopener">
+          <a id="profile-link" href="https://t.me/lu1zs" target="_blank" rel="noreferrer">
             <img src={telegramImg} alt="telegram" />
           </a>
         </div>
