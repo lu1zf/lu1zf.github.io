@@ -2,6 +2,8 @@ import './styles.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
+import getUnicodeFlagIcon from 'country-flag-icons/unicode'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,6 +22,8 @@ const Navbar = () => {
       links.style.top = '0';
     }
   }
+
+  const US = getUnicodeFlagIcon('US');
 
   return (
     <nav id="navbar">
@@ -40,6 +44,7 @@ const Navbar = () => {
         <li><a href="#welcome-section" onClick={toggleMenu}>Sobre</a></li>
         <li><a href="#projects" onClick={toggleMenu}>Projetos</a></li>
         <li><a href="#contact" onClick={toggleMenu}>Contato</a></li>
+        <li><a href="#">English version {US}</a></li>
       </ul>
       <div id="hamburguer-menu" onClick={toggleMenu}>
         {isMenuOpen && <CloseIcon sx={{ fontSize: 32 }} />}
