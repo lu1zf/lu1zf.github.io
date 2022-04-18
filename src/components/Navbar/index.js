@@ -44,11 +44,24 @@ const Navbar = ({ data, lang }) => {
         </a>
       </div>
       <ul id="links">
-        <li><HashLink to='/#welcome-section' onClick={toggleMenu}>{about}</HashLink></li>
-        <li><HashLink to='/#projects' onClick={toggleMenu}>{projects}</HashLink></li>
-        <li><HashLink to="/#contact" onClick={toggleMenu}>{contact}</HashLink></li>
-        {(lang == 'pt-br') && <li><HashLink to="/en" onClick={toggleMenu}>English version {US}</HashLink></li>}
-        {(lang == 'en-us') && <li><HashLink to="/" onClick={toggleMenu}>Versão em português {BR}</HashLink></li>}
+        {(lang == 'pt-br') && (
+          <>
+            <li><HashLink to='#welcome-section' onClick={toggleMenu}>{about}</HashLink></li>
+            <li><HashLink to='#projects' onClick={toggleMenu}>{projects}</HashLink></li>
+            <li><HashLink to="#contact" onClick={toggleMenu}>{contact}</HashLink></li>
+            <li><HashLink to="/en" onClick={toggleMenu}>English version {US}</HashLink></li>
+          </>
+        )}
+        {(lang == 'en-us') && (
+          <>
+            <li><HashLink to='/en/#welcome-section' onClick={toggleMenu}>{about}</HashLink></li>
+            <li><HashLink to='/en/#projects' onClick={toggleMenu}>{projects}</HashLink></li>
+            <li><HashLink to="/en/#contact" onClick={toggleMenu}>{contact}</HashLink></li>
+            <li><HashLink to="/" onClick={toggleMenu}>Versão em português {BR}</HashLink></li>
+          </>
+        )}
+
+
       </ul>
       <div id="hamburguer-menu" onClick={toggleMenu}>
         {isMenuOpen && <CloseIcon sx={{ fontSize: 32 }} />}
