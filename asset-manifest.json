@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3e11952b.css",
-    "main.js": "/static/js/main.c02adb03.js",
+    "main.js": "/static/js/main.860161d9.js",
     "static/media/tubetools.png": "/static/media/tubetools.bb3ec06df4671eccf8ee.png",
     "static/media/mutuo_associados.png": "/static/media/mutuo_associados.a1a3fcf24943f03999f2.png",
     "static/media/currency-convert.png": "/static/media/currency-convert.b401a458ae176364d05b.png",
@@ -14,10 +14,10 @@
     "index.html": "/index.html",
     "static/media/linkedin.svg": "/static/media/linkedin.65b90518926cd16c326193e9d027d71a.svg",
     "main.3e11952b.css.map": "/static/css/main.3e11952b.css.map",
-    "main.c02adb03.js.map": "/static/js/main.c02adb03.js.map"
+    "main.860161d9.js.map": "/static/js/main.860161d9.js.map"
   },
   "entrypoints": [
     "static/css/main.3e11952b.css",
-    "static/js/main.c02adb03.js"
+    "static/js/main.860161d9.js"
   ]
 }
