@@ -5,7 +5,8 @@ import { useState } from 'react';
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 
 
-const Navbar = () => {
+const Navbar = ({ data }) => {
+  const { about, contact, projects } = data;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = (event) => {
@@ -41,9 +42,9 @@ const Navbar = () => {
         </a>
       </div>
       <ul id="links">
-        <li><a href="#welcome-section" onClick={toggleMenu}>Sobre</a></li>
-        <li><a href="#projects" onClick={toggleMenu}>Projetos</a></li>
-        <li><a href="#contact" onClick={toggleMenu}>Contato</a></li>
+        <li><a href="#welcome-section" onClick={toggleMenu}>{about}</a></li>
+        <li><a href="#projects" onClick={toggleMenu}>{projects}</a></li>
+        <li><a href="#contact" onClick={toggleMenu}>{contact}</a></li>
         <li><a href="#">English version {US}</a></li>
       </ul>
       <div id="hamburguer-menu" onClick={toggleMenu}>

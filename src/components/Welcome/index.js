@@ -1,16 +1,17 @@
 import './styles.css';
 import welcomeImg from '../../assets/developer.svg';
 
-const Welcome = () => {
+const Welcome = ({ data }) => {
+  const { h1, subtext, description } = data;
+
   return (
     <section id="welcome-section">
       <div className="section-container">
         <div className="left">
-          <h1>Olá, sou Luiz Silva</h1>
-          <div className="subtext">Desenvolvedor Fullstack</div>
+          <h1>{h1}</h1>
+          <div className="subtext">{subtext}</div>
           <p>
-            Potiguar, trabalho como desenvolvedor desde 2020. Atualmente
-            atuo como dev fullstack na <a href="http://negocioonlinedozero.com" target="_blank">NODZ</a>.
+            {description} <a href="http://negocioonlinedozero.com" target="_blank">NODZ</a>.
           </p>
         </div>
         <div className="right">

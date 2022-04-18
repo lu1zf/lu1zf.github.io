@@ -3,12 +3,13 @@ import githubImg from '../../assets/github.svg';
 import linkedinImg from '../../assets/linkedin.svg';
 import telegramImg from '../../assets/telegram.svg';
 
-const Contact = () => {
+const Contact = ({ data }) => {
+  const { h2, description } = data;
   return (
     <section id="contact">
       <div className="section-container">
-        <h2>Contato</h2>
-        <p>Me acompanhe nas redes sociais ou envie uma mensagem.</p>
+        <h2>{h2}</h2>
+        <p>{description}</p>
         <div className="links-container">
           <a id="profile-link" href="https://www.linkedin.com/in/lu1zf/" target="_blank">
             <img src={linkedinImg} alt="linkedin" />
