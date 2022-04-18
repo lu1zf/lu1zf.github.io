@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './global.css';
 import App from './App';
 import {
-  HashRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -12,11 +12,11 @@ import { data } from './data/data';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<App data={data.portuguese} lang="pt-br" />} />
-        <Route exact path="en" element={<App data={data.english} lang="en-us" />} />
+        <Route path="/" element={<App data={data.portuguese} lang="pt-br" />} />
+        <Route path="en" element={<App data={data.english} lang="en-us" />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   </React.StrictMode>
 );

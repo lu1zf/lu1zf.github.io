@@ -3,7 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 import getUnicodeFlagIcon from 'country-flag-icons/unicode';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = ({ data, lang }) => {
@@ -31,7 +31,7 @@ const Navbar = ({ data, lang }) => {
   return (
     <nav id="navbar">
       <div id="logo">
-        <HashLink to={lang === 'pt-br' ? '#welcome-section' : '/en/#welcome-section'}>
+        <a href={lang === 'pt-br' ? '#welcome-section' : '#welcome-section'} >
           <span className="tag">
             &lt;
           </span>
@@ -41,27 +41,18 @@ const Navbar = ({ data, lang }) => {
           <span className="tag">
             / &gt;
           </span>
-        </HashLink>
+        </a>
       </div>
       <ul id="links">
+        <li><a href='#welcome-section' onClick={toggleMenu}>{about}</a></li>
+        <li><a href='#projects' onClick={toggleMenu}>{projects}</a></li>
+        <li><a href="#contact" onClick={toggleMenu}>{contact}</a></li>
         {(lang === 'pt-br') && (
-          <>
-            <li><HashLink to='#welcome-section' onClick={toggleMenu}>{about}</HashLink></li>
-            <li><HashLink to='#projects' onClick={toggleMenu}>{projects}</HashLink></li>
-            <li><HashLink to="#contact" onClick={toggleMenu}>{contact}</HashLink></li>
-            <li><HashLink to="/en" onClick={toggleMenu}>English version {US}</HashLink></li>
-          </>
+          <li><Link to="/en" onClick={toggleMenu}>English version {US}</Link></li>
         )}
         {(lang === 'en-us') && (
-          <>
-            <li><HashLink to='/en/#welcome-section' onClick={toggleMenu}>{about}</HashLink></li>
-            <li><HashLink to='/en/#projects' onClick={toggleMenu}>{projects}</HashLink></li>
-            <li><HashLink to="/en/#contact" onClick={toggleMenu}>{contact}</HashLink></li>
-            <li><HashLink to="/" onClick={toggleMenu}>Versão em português {BR}</HashLink></li>
-          </>
+          <li><Link to="/" onClick={toggleMenu}>Versão em português {BR}</Link></li>
         )}
-
-
       </ul>
       <div id="hamburguer-menu" onClick={toggleMenu}>
         {isMenuOpen && <CloseIcon sx={{ fontSize: 32 }} />}
