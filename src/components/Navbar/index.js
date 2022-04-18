@@ -31,7 +31,7 @@ const Navbar = ({ data, lang }) => {
   return (
     <nav id="navbar">
       <div id="logo">
-        <a href="#">
+        <HashLink to={lang == 'pt-br' ? '#welcome-section' : '/en/#welcome-section'}>
           <span className="tag">
             &lt;
           </span>
@@ -41,10 +41,10 @@ const Navbar = ({ data, lang }) => {
           <span className="tag">
             / &gt;
           </span>
-        </a>
+        </HashLink>
       </div>
       <ul id="links">
-        {(lang == 'pt-br') && (
+        {(lang === 'pt-br') && (
           <>
             <li><HashLink to='#welcome-section' onClick={toggleMenu}>{about}</HashLink></li>
             <li><HashLink to='#projects' onClick={toggleMenu}>{projects}</HashLink></li>
@@ -52,7 +52,7 @@ const Navbar = ({ data, lang }) => {
             <li><HashLink to="/en" onClick={toggleMenu}>English version {US}</HashLink></li>
           </>
         )}
-        {(lang == 'en-us') && (
+        {(lang === 'en-us') && (
           <>
             <li><HashLink to='/en/#welcome-section' onClick={toggleMenu}>{about}</HashLink></li>
             <li><HashLink to='/en/#projects' onClick={toggleMenu}>{projects}</HashLink></li>

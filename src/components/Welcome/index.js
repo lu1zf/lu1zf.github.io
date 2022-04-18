@@ -11,7 +11,7 @@ const Welcome = ({ data }) => {
           <h1>{h1}</h1>
           <div className="subtext">{subtext}</div>
           <p>
-            {description} <a href="http://negocioonlinedozero.com" target="_blank">NODZ</a>.
+            {description} <a href="http://negocioonlinedozero.com" target="_blank" rel="noreferrer">NODZ</a>.
           </p>
         </div>
         <div className="right">

@@ -23,7 +23,7 @@ const Projects = ({ data }) => {
                 {project.techs}
               </div>
               <div className="project-source">
-                <a className="project-link" href={project.source.link} target="_blank">{project.source.text}</a>
+                <a className="project-link" href={project.source.link} target="_blank" rel="noreferrer">{project.source.text}</a>
               </div>
             </div>
             <div className="project-image">
@@ -47,7 +47,7 @@ const Projects = ({ data }) => {
                 {project.techs}
               </div>
               <div className="project-source">
-                <a className="project-link" href={project.source.link} target="_blank">{project.source.text}</a>
+                <a className="project-link" href={project.source.link} target="_blank" rel="noreferrer">{project.source.text}</a>
               </div>
             </div>
             <div className="project-image">
