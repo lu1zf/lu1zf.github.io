@@ -3,7 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 import getUnicodeFlagIcon from 'country-flag-icons/unicode';
-import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 
 const Navbar = ({ data, lang }) => {
@@ -44,11 +44,11 @@ const Navbar = ({ data, lang }) => {
         </a>
       </div>
       <ul id="links">
-        <li><a href="#welcome-section" onClick={toggleMenu}>{about}</a></li>
-        <li><a href="#projects" onClick={toggleMenu}>{projects}</a></li>
-        <li><a href="#contact" onClick={toggleMenu}>{contact}</a></li>
-        {(lang == 'pt-br') && <li><Link to="/en" onClick={toggleMenu}>English version {US}</Link></li>}
-        {(lang == 'en-us') && <li><Link to="/" onClick={toggleMenu}>Versão em português {BR}</Link></li>}
+        <li><HashLink to='/#welcome-section' onClick={toggleMenu}>{about}</HashLink></li>
+        <li><HashLink to='/#projects' onClick={toggleMenu}>{projects}</HashLink></li>
+        <li><HashLink to="/#contact" onClick={toggleMenu}>{contact}</HashLink></li>
+        {(lang == 'pt-br') && <li><HashLink to="/en" onClick={toggleMenu}>English version {US}</HashLink></li>}
+        {(lang == 'en-us') && <li><HashLink to="/" onClick={toggleMenu}>Versão em português {BR}</HashLink></li>}
       </ul>
       <div id="hamburguer-menu" onClick={toggleMenu}>
         {isMenuOpen && <CloseIcon sx={{ fontSize: 32 }} />}
