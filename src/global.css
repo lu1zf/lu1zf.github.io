@@ -29,7 +29,7 @@ html {
 
   --transition: .4s all;
 
-  --section-container-max-width: 80vw;
+  --section-container-max-width: 70vw;
 }
 
 body {
@@ -74,6 +74,10 @@ a:hover {
 
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
+  :root {
+    --section-container-max-width: 80vw;
+  }
+
   html {
     font-size: 60%;
   }
@@ -90,5 +94,12 @@ a:hover {
 @media (max-width: 28.75em) {
   html {
     font-size: 55%;
+  }
+}
+
+/* 1920 / 16px = 120em */
+@media (min-width: 120em) {
+  :root {
+    --section-container-max-width: 50vw;
   }
 }
