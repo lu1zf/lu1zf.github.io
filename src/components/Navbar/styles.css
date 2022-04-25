@@ -22,10 +22,13 @@ nav ul li {
 nav ul li a {
   color: var(--text-secondary);
   transition: var(--transition);
+  padding-bottom: .5rem;
+  border-bottom: 2px solid transparent;
 }
 
 nav ul li a:hover {
   color: var(--text-primary);
+  border-bottom: 2px solid var(--text-secondary);
 }
 
 #logo a {
@@ -77,10 +80,6 @@ span.tag {
   nav ul li a {
     padding-bottom: 0.5rem;
     border-bottom: 2px solid transparent;
-  }
-
-  nav ul li a:hover {
-    border-bottom: 2px solid var(--text-secondary);
   }
 
   #hamburguer-menu {
