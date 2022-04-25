@@ -66,6 +66,7 @@ a {
   text-decoration: none;
   color: var(--text-secondary);
   transition: var(--transition);
+  font-weight: bold;
 }
 
 a:hover {
