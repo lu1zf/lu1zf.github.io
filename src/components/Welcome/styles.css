@@ -35,7 +35,8 @@
 #welcome-section .subtext {
   font-size: 2rem;
   margin-bottom: 3rem;
-  color: var(--text-secondary);
+  color: var(--blue-accent);
+  font-weight: bold;
 }
 
 #welcome-section p {
