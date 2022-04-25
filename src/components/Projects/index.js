@@ -1,4 +1,5 @@
 import './styles.css';
+import CodeIcon from '@mui/icons-material/Code';
 
 const Projects = ({ data }) => {
   const { h2, professionals, personals } = data;
@@ -6,7 +7,7 @@ const Projects = ({ data }) => {
   return (
     <section id="projects">
       <div className="section-container">
-        <h2>{h2}</h2>
+        <h2><CodeIcon /> {h2}</h2>
         <h3>{professionals.title}</h3>
         <p>{professionals.description}</p>
         <div className="projects-container">
