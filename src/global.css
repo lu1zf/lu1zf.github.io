@@ -53,9 +53,17 @@ h1 {
   font-size: 6rem;
 }
 
-h2 {
+.section-container h2 {
   font-size: 4rem;
   padding: 3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.section-container h2 svg {
+  color: var(--blue-accent);
+  font-size: 3rem;
+  margin-right: 1rem;
 }
 
 h3 {
