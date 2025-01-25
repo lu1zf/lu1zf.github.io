@@ -1,5 +1,5 @@
 import './styles.css';
-import welcomeImg from '../../assets/developer.svg';
+import welcomeImg from '../../assets/me.jpg';
 
 const Welcome = ({ data }) => {
   const { h1, subtext, description } = data;
@@ -11,7 +11,7 @@ const Welcome = ({ data }) => {
           <h1>{h1}</h1>
           <div className="subtext">{subtext}</div>
           <p>
-            {description} <a href="http://negocioonlinedozero.com" target="_blank" rel="noreferrer">NODZ</a>.
+            {description} <a href="https://queropassagem.com.br/" target="_blank" rel="noreferrer">Quero Passagem</a>.
           </p>
         </div>
         <div className="right">

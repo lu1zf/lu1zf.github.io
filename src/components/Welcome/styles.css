@@ -30,6 +30,7 @@
 
 #welcome-section .section-container .right img {
   width: 80%;
+  border-radius: 50%;
 }
 
 #welcome-section .subtext {
